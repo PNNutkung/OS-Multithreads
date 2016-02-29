@@ -103,9 +103,9 @@ int main(int argc, char const* argv[]){
         printf("ERROR; return code from pthread_create() is %d\n", rc2);
         exit(-1);
      }
-     int ppp;
-     for ( ppp = 0; ppp < 2; ppp++)
-       pthread_join(threads[ppp], NULL);
+     int run;
+     for ( run = 0; run < 2; run++)
+       pthread_join(threads[run], NULL);
     printf("Min: %d\n", ans[1]);
     printf("Max: %d\n", ans[0]);
     printf("Average: %d\n", ans[2]);
